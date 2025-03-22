@@ -1,0 +1,63 @@
+Total: 436053
+AgeGroub| HeartAttacks /TotalGroub| %Percent
+18 > 24 | 0122 HeartAttack /26941 | 00.45%
+25 > 29 | 0119 HeartAttack /21990 | 00.54%
+30 > 34 | 0087 HeartAttack /25807 | 00.34%
+35 > 39 | 0318 HeartAttack /28531 | 01.11%
+40 > 44 | 0418 HeartAttack /29942 | 01.40%
+45 > 49 | 0728 HeartAttack /28531 | 02.55%
+50 > 54 | 1250 HeartAttack /33644 | 03.72%
+55 > 59 | 1960 HeartAttack /36251 | 05.41%
+60 > 64 | 2890 HeartAttack /44511 | 06.49%
+65 > 69 | 3700 HeartAttack /47099 | 07.86%
+70 > 74 | 4216 HeartAttack /43199 | 09.76%
+75 > 79 | 3789 HeartAttack /32244 | 11.75%
+80 > ++ | 5024 HeartAttack /35738 | 14.06%
+
+30 > 34: 00.34% | 0
+18 > 24: 00.45% | 1.0
+25 > 29: 00.54% | 1.5
+35 > 39: 01.11% | 2.5
+40 > 44: 01.40% | 3.5
+45 > 49: 02.55% | 4.5
+50 > 54: 03.72% | 5.0
+55 > 59: 05.41% | 6.0
+60 > 64: 06.49% | 7.0
+65 > 69: 07.86% | 7.5
+70 > 74: 09.76% | 8.5
+75 > 79: 11.75% | 9.0
+80 > ++: 14.06% | 10
+
+------Code------
+# handling the values of GeneralHealth:
+#'Age 30 to 34': 0
+#'Age 18 to 24': 1.0
+#'Age 25 to 29': 1.5
+#'Age 35 to 39': 2.5
+#'Age 40 to 44': 3.5
+#'Age 45 to 49': 4.5
+#'Age 50 to 54': 5.0
+#'Age 55 to 59': 6.0
+#'Age 60 to 64': 7.0
+#'Age 65 to 69': 7.5
+#'Age 70 to 74': 8.5
+#'Age 75 to 79': 9.0
+#'Age 80 or older': 10
+
+data['AgeCategory'] = data['AgeCategory'].replace({
+'Age 30 to 34': 0,
+'Age 18 to 24': 1.0,
+'Age 25 to 29': 1.5,
+'Age 35 to 39': 2.5,
+'Age 40 to 44': 3.5,
+'Age 45 to 49': 4.5,
+'Age 50 to 54': 5.0,
+'Age 55 to 59': 6.0,
+'Age 60 to 64': 7.0,
+'Age 65 to 69': 7.5,
+'Age 70 to 74': 8.5,
+'Age 75 to 79': 9.0,
+'Age 80 or older': 10
+}).infer_objects(copy=False)
+
+CreatedBy: Ahmed Galal & Taher Mohamed [3/22/2025]
